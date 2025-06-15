@@ -13,5 +13,25 @@ export default {};
   width: 100%;
   border-radius: 8px;
   margin: 1rem 0;
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .banner img {
+    max-height: 200px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .banner img {
+    max-height: 60px;        /* Giảm từ 120px xuống 60px (1 nửa) */
+    border-radius: 5px;
+    margin: 0.5rem 0;
+  }
 }
 </style>

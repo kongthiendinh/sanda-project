@@ -34,4 +34,24 @@ export default {
   gap: 24px;
   margin-top: 18px;
 }
+@media (max-width: 900px) {
+  .home-news {
+    padding: 12px 8px;
+    border-radius: 6px;
+  }
+  .news-list {
+    gap: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .home-news {
+    padding: 7px 2px;
+    border-radius: 5px;
+  }
+  .news-list {
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 7px;
+  }
+}
 </style>

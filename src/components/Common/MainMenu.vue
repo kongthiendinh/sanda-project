@@ -46,10 +46,10 @@ export default {
   border-radius: 8px;
   box-shadow: 0 2px 8px #eee;
   padding: 0;
-  /* Chiều cao cố định, menu luôn cùng kích thước */
-  height: 510px; /* có thể điều chỉnh (ví dụ 450px, 500px, v.v.) */
+  height: 544px;
   min-height: 525px;
-  max-height: 530px;
+  max-height: 550px;
+  overflow: hidden;
 }
 .menu-title {
   padding: 18px 18px 10px 18px;
@@ -119,5 +119,68 @@ export default {
 .submenu-item a:hover {
   background: #fbeee3;
   color: #e05c04;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .side-menu {
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    margin-bottom: 24px;
+  }
+  .menu-title {
+    padding: 14px 12px 6px 12px;
+    font-size: 15px;
+  }
+  .main-link {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  .icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+  }
+  .submenu {
+    min-width: 130px;
+    padding: 5px 0;
+  }
+  .submenu-item a {
+    font-size: 13.5px;
+    padding: 7px 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .side-menu {
+    border-radius: 6px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 4px #eee;
+  }
+  .menu-title {
+    padding: 10px 6px 4px 10px;
+    font-size: 14px;
+    gap: 5px;
+  }
+  .main-link {
+    font-size: 13px;
+    padding: 8px 8px;
+  }
+  .icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+  }
+  .submenu {
+    min-width: 90px;
+    padding: 2px 0;
+    border-radius: 5px;
+  }
+  .submenu-item a {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
 }
 </style>

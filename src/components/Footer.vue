@@ -17,7 +17,7 @@ export default {};
 
 <style scoped>
 .footer {
-  background: #222;
+  background: rgba(0,0,0,0.63); /* đen trong suốt, nhìn xuống nền */
   color: #fff;
   padding: 2rem 0;
   text-align: center;
@@ -34,5 +34,34 @@ export default {};
 .footer a {
   color: #ff6600;
   text-decoration: none;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .footer {
+    padding: 1.2rem 0;
+  }
+  .footer .container {
+    max-width: 98vw;
+    font-size: 0.98rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .footer {
+    padding: 0.7rem 0;
+    font-size: 0.97rem;
+  }
+  .footer .container {
+    max-width: 100vw;
+    padding: 0 8px;
+    gap: 0.3rem;
+  }
+  .footer a {
+    display: inline-block;
+    margin: 0 2px;
+    font-size: 0.99em;
+  }
 }
 </style>

@@ -39,14 +39,14 @@ export default {
 .block1,
 .block2 {
   max-width: 1200px;
-  margin: 32px auto 0 auto;   /* 32px là khoảng cách phía trên, bạn có thể tăng/giảm */
+  margin: 32px auto 0 auto;
   align-items: flex-start;
 }
 .block1 {
   display: flex;
   gap: 24px;
   max-width: 1200px;
-  margin: 32px auto 0 auto;   /* 32px là khoảng cách phía trên, bạn có thể tăng/giảm */
+  margin: 32px auto 0 auto;
   align-items: flex-start;
 }
 .left-menu {
@@ -66,17 +66,55 @@ export default {
   gap: 24px;
 }
 
-/* Responsive */
+/* Tablet */
 @media (max-width: 900px) {
-  .block1, .block2 {
+  .block1,
+  .block2 {
     flex-direction: column;
     max-width: 100%;
     gap: 0;
     margin-top: 16px;
+    align-items: stretch;
   }
-  .left-menu, .right-block {
+  .left-menu,
+  .right-block {
     width: 100%;
     min-width: unset;
+  }
+  .block1 {
+    gap: 0;
+  }
+  .right-block {
+    gap: 16px;
+  }
+  .block2 {
+    gap: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .block1,
+  .block2 {
+    margin-top: 8px;
+    padding: 0 4px;
+  }
+  .block1 {
+    gap: 0;
+  }
+
+  /* Ẩn side menu trên mobile */
+  .left-menu {
+    display: none !important;
+  }
+
+  .right-block {
+    width: 100%;
+    min-width: unset;
+    gap: 10px;
+  }
+  .block2 {
+    gap: 10px;
   }
 }
 </style>

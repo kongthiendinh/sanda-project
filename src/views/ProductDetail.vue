@@ -45,6 +45,48 @@ export default {
   border-radius: 8px;
   padding: 2rem;
 }
+
+/* Responsive Tablet */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    max-width: 98vw;
+  }
+  .detail-img {
+    width: 270px;
+    height: 270px;
+  }
+}
+
+/* Responsive Mobile */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.7rem;
+    gap: 1rem;
+    max-width: 100vw;
+  }
+  .detail-img {
+    width: 180px;
+    height: 180px;
+  }
+  .info h1 {
+    font-size: 1.3rem;
+  }
+  .price {
+    font-size: 1.1rem;
+  }
+  button {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+}
+
 .detail-img {
   width: 340px;
   height: 340px;

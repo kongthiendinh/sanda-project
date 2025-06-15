@@ -65,23 +65,16 @@ export default {
 }
 .category-list {
   display: flex;
-  flex-wrap: wrap;           /* Cho phép xuống dòng khi hết khung */
+  flex-wrap: wrap;
   gap: 32px;
-  justify-content: flex-start; /* Items sẽ bám sát trái, không dàn đều */
+  justify-content: flex-start;
   margin-top: 15px;
-}
-@media (max-width: 900px) {
-  .category-list {
-    flex-direction: row;      /* Đảm bảo luôn xếp ngang, không chuyển sang dọc */
-    flex-wrap: wrap;
-    gap: 18px;
-  }
 }
 .show-more-btn {
   margin: 20px auto 0 auto;
   display: block;
-  background: rgba(220, 38, 38, 0.12); /* đỏ nhạt, có thể tăng giảm opacity */
-  color: #d32f2f; /* chữ đỏ đậm */
+  background: rgba(220, 38, 38, 0.12);
+  color: #d32f2f;
   border: 1px solid #d32f2f;
   border-radius: 6px;
   padding: 10px 24px;
@@ -90,10 +83,9 @@ export default {
   font-weight: 600;
   transition: background 0.2s, color 0.2s;
 }
-
 .show-more-btn:hover {
-  background: #d32f2f;    /* nền đỏ đậm khi hover */
-  color: #fff;            /* chữ trắng khi hover */
+  background: #d32f2f;
+  color: #fff;
 }
 
 @media (max-width: 900px) {
@@ -101,8 +93,43 @@ export default {
     padding: 12px 8px;
   }
   .category-list {
-    flex-direction: column;
     gap: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .categories {
+    padding: 7px 2px;
+    border-radius: 6px;
+  }
+  .category-list {
+    gap: 9px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    margin-left: -4px;
+    margin-right: -4px;
+    scrollbar-width: thin;
+    scrollbar-color: #eee #fff;
+  }
+  .category-list > * {
+    min-width: 82px;
+    flex: 0 0 auto;
+  }
+  .show-more-btn {
+    font-size: 14px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    margin: 12px auto 0 auto;
+  }
+  /* Ẩn scrollbar trên Chrome, Safari */
+  .category-list::-webkit-scrollbar {
+    height: 4px;
+    background: transparent;
+  }
+  .category-list::-webkit-scrollbar-thumb {
+    background: #eee;
+    border-radius: 3px;
   }
 }
 </style>

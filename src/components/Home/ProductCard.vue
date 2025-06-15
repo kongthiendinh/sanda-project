@@ -32,7 +32,7 @@ export default {
   text-align: center;
   position: relative;
   cursor: pointer;
-  transition: box-shadow .2s;
+  transition: box-shadow .2s, transform .2s;
 }
 .product-card:hover {
   box-shadow: 0 6px 18px #e0e0e0;
@@ -59,6 +59,13 @@ export default {
   margin-bottom: 6px;
   font-size: 15px;
   min-height: 34px;
+  line-height: 1.2;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 .price {
   margin-bottom: 9px;
@@ -74,5 +81,63 @@ export default {
   font-size: 14px;
   margin-left: 8px;
 }
-/* Đã xoá style cho button */
+
+@media (max-width: 900px) {
+  .product-card {
+    width: 180px;
+    padding: 10px 5px;
+    border-radius: 7px;
+  }
+  .product-card img {
+    height: 110px;
+    border-radius: 7px 7px 0 0;
+  }
+  .sale-label {
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 7px 0 7px 0;
+  }
+  .name {
+    font-size: 14px;
+    min-height: 26px;
+  }
+  .sale {
+    font-size: 15px;
+  }
+  .old {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-card {
+    width: 95vw;
+    min-width: 0;
+    padding: 8px 3px;
+    border-radius: 5px;
+  }
+  .product-card img {
+    height: 70vw;
+    min-height: 50px;
+    max-height: 110px;
+    border-radius: 5px 5px 0 0;
+  }
+  .sale-label {
+    font-size: 11px;
+    padding: 2px 7px;
+    border-radius: 5px 0 5px 0;
+  }
+  .name {
+    font-size: 13px;
+    min-height: 22px;
+  }
+  .sale {
+    font-size: 14px;
+  }
+  .old {
+    font-size: 11px;
+    margin-left: 4px;
+  }
+}
 </style>

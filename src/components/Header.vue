@@ -1,17 +1,14 @@
 <template>
   <header class="header">
     <div class="container">
-      <img src="@/assets/logo.png" alt="Meta.vn" class="logo" />
-      <input type="text" class="search" placeholder="Tìm kiếm sản phẩm..." />
-      <nav>
-        <a href="/">Trang chủ</a>
-        <a href="#">Khuyến mãi</a>
-        <a href="#">Danh mục</a>
+      <div class="logo">
+        <img src="@/assets/logo.png" alt="Logo" />
+      </div>
+      <nav class="navigation">
+        <a href="#">Trang chủ</a>
+        <a href="#">Sản phẩm</a>
         <a href="#">Liên hệ</a>
       </nav>
-      <div class="cart">
-        🛒 <span>0</span>
-      </div>
     </div>
   </header>
 </template>
@@ -23,34 +20,51 @@ export default {};
 <style scoped>
 .header {
   background: #fff;
-  box-shadow: 0 2px 8px #f0f1f2;
-  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
 }
 .container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
+  padding: 0.7rem 2rem;
+  justify-content: space-between;
 }
-.logo {
-  height: 50px;
-  margin-right: 2rem;
+.logo img {
+  height: 40px;
 }
-.search {
-  flex: 1;
-  padding: 8px;
-  margin: 0 2rem 0 0;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-}
-nav a {
-  margin: 0 1rem;
+.navigation a {
   color: #333;
+  margin-left: 20px;
   text-decoration: none;
+  font-weight: 500;
 }
-.cart {
-  margin-left: 2rem;
-  font-size: 1.2rem;
-  color: #ff6600;
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    padding: 0.7rem 1rem;
+  }
+  .navigation a {
+    margin-left: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0.7rem 0.5rem;
+  }
+  .navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .navigation a {
+    margin-left: 0;
+    padding: 4px 0;
+  }
 }
 </style>

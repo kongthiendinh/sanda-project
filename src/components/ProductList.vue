@@ -42,4 +42,29 @@ export default {
   gap: 2rem;
   justify-content: flex-start;
 }
+
+/* Tablet */
+@media (max-width: 900px) {
+  .product-list {
+    max-width: 98vw;
+    padding: 0 0.5rem;
+  }
+  .products {
+    gap: 1.2rem;
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .product-list {
+    max-width: 100vw;
+    padding: 0 0.2rem;
+  }
+  .products {
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
+  }
+}
 </style>

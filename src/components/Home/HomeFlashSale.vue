@@ -30,7 +30,6 @@ export default {
         { name: 'Sàn đá công nghệ SPC chất lượng kém MS2-402', image: require('@/assets/images/product2.jpg'), price: 1250000, oldPrice: 1850000, sale: 32 },
         { name: 'Sàn đá bền MS2-403', image: require('@/assets/images/product3.jpg'), price: 5990000, oldPrice: 6990000, sale: 15 },
         { name: 'Sàn đá trơn MS2-404', image: require('@/assets/images/product4.jpg'), price: 2490000, oldPrice: 3490000, sale: 29 },
-        // Thêm sản phẩm mẫu nếu muốn test nút "Xem thêm"
         { name: 'Sàn đá trượt MS2-405', image: require('@/assets/images/product5.jpg'), price: 15990000, oldPrice: 18990000, sale: 16 },
         { name: 'Sàn đá bóng MS2-406', image: require('@/assets/images/product6.jpg'), price: 2990000, oldPrice: 3790000, sale: 21 },
         { name: 'Sàn đá không có công nghệ MS2-407', image: require('@/assets/images/product7.jpg'), price: 850000, oldPrice: 1200000, sale: 29 },
@@ -75,7 +74,7 @@ export default {
 .show-more-btn {
   margin: 20px auto 0 auto;
   display: block;
-  background: rgba(220, 38, 38, 0.12); /* đỏ nhạt, nhìn được nền */
+  background: rgba(220, 38, 38, 0.12);
   color: #d32f2f;
   border: 1px solid #d32f2f;
   border-radius: 6px;
@@ -93,11 +92,43 @@ export default {
 @media (max-width: 900px) {
   .flash-sale {
     padding: 12px 8px;
+    border-radius: 6px;
+  }
+  .fs-products {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .flash-sale {
+    padding: 7px 2px;
+    border-radius: 5px;
+  }
+  .fs-header {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
   .fs-products {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 7px;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-top: 7px;
+  }
+  .fs-products > * {
+    width: 48%;
+    min-width: 120px;
+    box-sizing: border-box;
+  }
+  .show-more-btn {
+    font-size: 14px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    margin: 12px auto 0 auto;
   }
 }
 </style>

@@ -78,7 +78,7 @@ export default {
   border-radius: 8px;
   padding: 0;
   box-sizing: border-box;
-  background: none !important; /* Bỏ nền đỏ */
+  background: none !important;
 }
 .main-banner-wrapper {
   position: relative;
@@ -86,7 +86,7 @@ export default {
   overflow: hidden;
   border-radius: 8px;
   background: none !important;
-  min-height: 220px;
+  min-height: 90px;
 }
 .main-banner-slide {
   display: flex;
@@ -172,5 +172,22 @@ export default {
   .main-banner-slide, .main-banner { height: 160px; }
   .side-banners { width: 100%; flex-direction: row; gap: 10px; min-width: unset;}
   .side-banners img { height: 70px; }
+}
+@media (max-width: 600px) {
+  .banner {
+    gap: 7px;
+    border-radius: 5px;
+  }
+  .main-banner-wrapper,
+  .main-banner-slide,
+  .main-banner { border-radius: 5px; }
+  .main-banner-slide, .main-banner { height: 98px; }
+  .side-banners { gap: 5px; }
+  .side-banners img {
+    border-radius: 5px;
+    height: 36vw;
+    min-height: 40px;
+    max-height: 60px;
+  }
 }
 </style>
